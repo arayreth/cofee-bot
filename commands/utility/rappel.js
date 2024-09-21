@@ -36,6 +36,11 @@ module.exports = {
                 name: `Rappel numéro ${index + 1}`,
                 value: `**ID**: ${reminder.id}\n**Titre**: ${reminder.title}\n**Description**: ${reminder.description}\n**Date limite**: <t:${reminder.timestamp}:D> <t:${reminder.timestamp}:R>`,
             });
+
+            // Add a separator after each reminder except the last one
+            if (index < userReminders.length - 1) {
+                embed.addFields({ name: '\u200b', value: '──────────' }); // Separator line
+            }
         });
 
         interaction.reply({ embeds: [embed] });     
