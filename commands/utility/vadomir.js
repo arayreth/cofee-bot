@@ -3,9 +3,9 @@ const fs = require('fs');
 
 module.exports = {
 	data: new SlashCommandBuilder()
-		.setName('ping')
-		.setDescription('Obtenir le ping du bot.'),
+		.setName('vadormir')
+		.setDescription('Allez dormir !!!'),
 	async execute(interaction) {
-                interaction.reply({content: `🏓 Pong ${interaction.client.ws.ping} ms !`});
+                interaction.reply(`<@927450521302863942> et <@477869784932024321> Aller dormir or consequences <:cofeeBan:1286735536794501142> !`);
     }
 }

@@ -14,9 +14,9 @@ module.exports = {
 		const i_deadline = new TextInputBuilder()
 		.setCustomId('deadline')
 		.setLabel("Quand est la date limite du rappel ?")
-		.setValue("JJ/MM/AAAA")
-		.setMinLength(10)
-		.setMaxLength(10)
+		.setValue("JJ/MM/AAAA HH:mm")
+		.setMinLength(16)
+		.setMaxLength(16)
 		.setRequired(true)
 		.setStyle(TextInputStyle.Short)
 
