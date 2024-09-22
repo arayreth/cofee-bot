@@ -33,7 +33,7 @@ module.exports = {
 
         userReminders.forEach((reminder, index) => {
             embed.addFields({
-                name: `Rappel numéro ${index + 1}`,
+                name: `Rappel`,
                 value: `**ID**: ${reminder.id}\n**Titre**: ${reminder.title}\n**Description**: ${reminder.description}\n**Date limite**: <t:${reminder.timestamp}:D> <t:${reminder.timestamp}:R>`,
             });
 
