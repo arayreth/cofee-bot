@@ -75,6 +75,10 @@ client.once(Events.ClientReady, readyClient => {
     cron.schedule('0 21 * * *', () => {
         readyClient.channels.cache.get('1040645618802114605').send(`<@927450521302863942> et <@477869784932024321> Aller dormir or consequences <:cofeeBan:1286735536794501142> !`);
     });
+	 // Scheduled message for users
+	 cron.schedule('0 22 * * *', () => {
+        readyClient.channels.cache.get('1040645618802114605').send(`<@927450521302863942> et <@477869784932024321> Aller dormir or consequences <:cofeeBan:1286735536794501142> !`);
+    });
 });	
 
 client.on(Events.InteractionCreate, async interaction => {
