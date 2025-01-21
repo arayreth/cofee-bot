@@ -2,3 +2,4 @@ config.json
 node_modules
 birthday.json
 reminders.json
+ecosystem.config.js

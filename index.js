@@ -25,6 +25,7 @@ for (const folder of commandFolders) {
 	}
 }
 
+
 client.once(Events.ClientReady, readyClient => {
 	console.log(`Ready! Logged in as ${readyClient.user.tag}`);
 
@@ -73,8 +74,23 @@ client.once(Events.ClientReady, readyClient => {
 
     // Scheduled message for users
     cron.schedule('0 21 * * *', () => {
-        readyClient.channels.cache.get('1040645618802114605').send(`<@927450521302863942> et <@477869784932024321> Aller dormir or consequences <:cofeeBan:1286735536794501142> !`);
+        readyClient.channels.cache.get('1040645618802114605').send(`<@927450521302863942>,<@477869784932024321> Aller dormir or consequences <:cofeeBan:1286735536794501142> !`);
     });
+	cron.schedule('0 22 * * *', () => {
+        readyClient.channels.cache.get('1040645618802114605').send(`<@923644471160242178> va dormir or consequences <:cofeeBan:1286735536794501142> !`);
+    });
+	cron.schedule('0 1 * * *', () => {
+        console.log(`Oui`);
+    });
+	cron.schedule('0 1 * * *', () => {
+        let emma_pseudo = ["Emma Brouette","Emma Matelas","Emmaüs","Emma c'est beau ça !","Mal au ventre Emmal à la tête","Emma cadam","Emmacedoine","Emmachiavelique","Emmademoiselle","Emma dame","Emmaestro","Emmagasin","emmagique","emmagnetoscope","emmagnetophone","emmagficente","emmaglonia","emmagouille","emmaigrie","emmajestueuse","emmajordome","emmajoritaire","emmalade","emmalaxage","emmalicieuse","emmamie","emmamifere","emmanutention","emmaquillage","emmarathonienne","emmarcassin","emmarche","emmarchepied","emmardi","emmarionette","emmartienne","emmathematiques","emmarseillaise","emmatelot","emmaximal","Emma le lutin"]
+		let random_index = Math.floor(Math.random() * emma_pseudo.length);
+		let pseudo_emma = emma_pseudo[random_index]
+		client.guilds.fetch("1040645618311385158").then(guild => guild.members.fetch("948298731948740640")).then(member => member.setNickname(pseudo_emma)).then(() => console.log(`Nouveau pseudo de emma: ${pseudo_emma}`)).catch(console.error);
+	});	
+	//const guild = readyClient.guilds.cache.get("1040645618311385158")
+	//const user = readyClient.guild.members.fetch("948298731948740640")
+	//console.log(user.id)
 });	
 
 client.on(Events.InteractionCreate, async interaction => {
