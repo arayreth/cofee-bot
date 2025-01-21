@@ -76,6 +76,7 @@ client.once(Events.ClientReady, readyClient => {
     cron.schedule('0 21 * * *', () => {
         readyClient.channels.cache.get('1040645618802114605').send(`<@927450521302863942>,<@477869784932024321> Aller dormir or consequences <:cofeeBan:1286735536794501142> !`);
     });
+<<<<<<< HEAD
 	cron.schedule('0 22 * * *', () => {
         readyClient.channels.cache.get('1040645618802114605').send(`<@923644471160242178> va dormir or consequences <:cofeeBan:1286735536794501142> !`);
     });
@@ -91,6 +92,12 @@ client.once(Events.ClientReady, readyClient => {
 	//const guild = readyClient.guilds.cache.get("1040645618311385158")
 	//const user = readyClient.guild.members.fetch("948298731948740640")
 	//console.log(user.id)
+=======
+	 // Scheduled message for users
+	 cron.schedule('0 22 * * *', () => {
+        readyClient.channels.cache.get('1040645618802114605').send(`<@927450521302863942> et <@477869784932024321> Aller dormir or consequences <:cofeeBan:1286735536794501142> !`);
+    });
+>>>>>>> 48f604e21be2eeba2f58d0e545490283eb0a9014
 });	
 
 client.on(Events.InteractionCreate, async interaction => {
